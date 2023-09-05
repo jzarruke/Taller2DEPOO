@@ -1,12 +1,12 @@
 package uniandes.dpoo.taller1.modelo;
 
-public class ProductoMenu {
+public class ProductoMenu implements Producto{
 	private String nombre;
 	private int precioBase;
 	
-	public ProductoMenu(String elNombre, int elPrecio){
-		this.nombre = elNombre;
-		this.precioBase = elPrecio;
+	public ProductoMenu(String elNombre, int precio){
+		nombre = elNombre;
+		precioBase = precio;
 	}
 	
 	public String getNombre(){
@@ -17,7 +17,8 @@ public class ProductoMenu {
 		return precioBase;
 	}
 	
-	public String generarFactura() {
-		return nombre;
+	public String generarTextoFactura() {
+		String noEspacios = nombre + precioBase;
+		return nombre.toUpperCase() + " ".repeat(29 - (noEspacios.length())) + "$" + precioBase;
 	}
 }

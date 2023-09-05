@@ -4,9 +4,9 @@ public class Ingrediente {
 	private String nombre;
 	private int costoAdicional;
 	
-	public Ingrediente(String elNombre, int elCosto){
-		this.nombre = elNombre;
-		this.costoAdicional = elCosto;
+	public Ingrediente(String elNombre, int costo){
+		nombre = elNombre;
+		costoAdicional = costo;
 	}
 	
 	public String getNombre(){
